@@ -31,7 +31,7 @@ h1{
     position: fixed;
     background-color: #1b263b;
     color: white;
-    padding: 20px;
+    padding: 30px;
 }
 
 .menu img{
@@ -230,9 +230,9 @@ footer i{
 
 /* Pantallas Grandes*/
 
-@media (min-width: 769px){
+@media (min-width: 1025px){
     main{
-        margin-left: 170px;
+        margin-left: 200px;
     }
 
     .menu {
@@ -266,4 +266,45 @@ footer i{
     footer{
         width: 100%;
     }
+}
+
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main{
+        margin-left: 200px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        padding: 30px;
+        top: 0;
+        left: 0;
+    }
+
+    .menu ul {
+        display: block;
+    }
+
+    .menu hr, .menu li {
+        display: block;
+    }
+
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    footer{
+        width: 100%;
+        margin-left: 80px;
+    }
+
 }
