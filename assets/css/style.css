@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+main{
+    margin-left: 170px;
+    padding: 20px;
+}
+
+body{
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    
+}
+
+h1{
+    padding: 15px;
+}
+
+
+/* menú */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: #1b263b;
+    color: white;
+    padding: 20px;
+}
+
+.menu img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.icon{
+    display: none;
+}
+
+.menu hr {
+    width: 100%;
+    border: 1px solid white;
+    margin: 10px 0;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #e0e1dd;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu ul li a:hover{
+    transform: scale(1.1);
+    color: #f4a261;
+}
+
+.titulo{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* galería */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 960px; 
+    margin: 0 auto;
+}
+
+.galeria img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in;
+}
+
+.galeria img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.08);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #0d1b2a;
+    color: white; 
+    margin: 20px auto; 
+    width: 100%;
+    text-align: center;
+    margin-left: 95px;
+    border-top: 2px solid #f4a261;
+}
+
+.redes{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.redes a{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.redes a:hover{
+    color: #f4a261;
+}
+
+footer i{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* responsive */
+
+/* Móvil */
+@media (max-width: 768px) {
+    main{
+        margin-left: 0px;
+    }
+
+    .menu{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .menu img{
+        width: 50px;
+        margin: 0;
+        order: 1;
+    }
+
+    .logo{
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+        flex: 1;
+        order: 2;
+    }
+
+    .icon{
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        order: 3;
+        margin: 8px;
+    }
+
+    .menu hr, .menu li{
+        display: none;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 40px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .galeria img{
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo{
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Pantallas Grandes*/
+
+@media (min-width: 769px){
+    main{
+        margin-left: 170px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        padding: 20px;
+        top: 0;
+        left: 0;
+    }
+
+    .menu ul {
+        display: block;
+    }
+
+    .menu hr, .menu li {
+        display: block;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+}
